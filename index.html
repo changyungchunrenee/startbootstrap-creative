@@ -28,22 +28,57 @@
 </head>
 
 <style>
-  .project-slider {
-    height: 100%;
-    min-height: 400px;
-  }
-  .project-slider .slick-list,
-  .project-slider .slick-track,
-  .project-slider .slick-slide,
-  .project-slider .slick-slide > div {
-    height: 100%;
-  }
-  .project-slider .image-bg {
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+
+#container{
+  width: 800px;
+  overflow: hidden;
+}  
+
+#slider1{
+    position: relative;
+    width: 3200px;
+    animation-name: slideranimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+
+}
+
+#slider1 img{
+  float: left;
+}
+
+@keyframes slideranimation{
+
+    0%
+    {
+        left: 0px;
+    }
+    20% /* 4 second */
+    {
+        left: 0px;
+    }
+    25% /* 5 second */
+    {
+        left: -800px;
+    }
+    45% /* 9 second */
+    {
+        left: -800px;
+    }
+    50% /* 10 second */
+    {
+        left: -1600px;
+    }
+    70% /* 14 second */
+    {
+        left: -1600px;
+    }
+    75% /* 15 second */
+    {
+        left: -2400px;
+    }
+}
+
 </style>
 
 <body id="page-top">
