@@ -10,6 +10,8 @@
 
   <title>Designer | Renee Chang</title>
   <link rel="shortcut icon" type="image/jpg" href="img/icon.jpg">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
   <!-- Font Awesome Icons -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,61 +25,10 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
 </head>
 
 <style>
-
-#container{
-  width: 800px;
-  overflow: hidden;
-}  
-
-#slider1{
-    position: relative;
-    width: 3200px;
-    animation-name: slideranimation;
-    animation-duration: 5s;
-    animation-iteration-count: infinite
-
-}
-
-#slider1 img{
-  float: left;
-}
-
-@keyframes slideranimation{
-
-    0%
-    {
-        left: 0px;
-    }
-    20% /* 4 second */
-    {
-        left: 0px;
-    }
-    25% /* 5 second */
-    {
-        left: -800px;
-    }
-    45% /* 9 second */
-    {
-        left: -800px;
-    }
-    50% /* 10 second */
-    {
-        left: -1600px;
-    }
-    70% /* 14 second */
-    {
-        left: -1600px;
-    }
-    75% /* 15 second */
-    {
-        left: -2400px;
-    }
-}
 
 </style>
 
@@ -259,6 +210,12 @@
     </div>
   </section>
 
+  <div class="slider2">
+      <div><img src="img/portfolio/fullsize/slide_2_1.jpg"></div>
+      <div><img src="img/portfolio/fullsize/slide_2_2.jpg"></div>
+      <div><img src="img/portfolio/fullsize/slide_2_3.jpg"></div>
+    </div>
+
   <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">
@@ -334,7 +291,8 @@
   <script src="js/creative.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function() {
         $(".slider").slick({
