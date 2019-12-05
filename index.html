@@ -121,7 +121,7 @@
 
   <!-- Portfolio Section -->
   <section id="portfolio">
-    <div class="container-fluid p-0">\
+    <div class="container-fluid p-0">
       <div class="row no-gutters">
         <div class="col-lg-4 col-sm-6">
           <a class="portfolio-link" data-toggle="slider" href="#slider1">
@@ -250,12 +250,13 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-8 mx-auto">
-                <div class="slider-body">
+                <div class="slider">
                 <div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_1.jpg"></div>
-                <div></div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_2.jpg"></div>
-                <div></div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_3.jpg"></div>
-                <div></div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_4.jpg"></div>
-                <div></div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_5.jpg"></div>
+                <div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_2.jpg"></div>
+                <div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_3.jpg"></div>
+                <div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_4.jpg"></div>
+                <div><img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/slide_1_5.jpg"></div>
+              </div>
                 <button class="btn btn-primary" data-dismiss="slider" type="button">
                     <i class="fas fa-times"></i>
                     close</button>
@@ -267,6 +268,25 @@
       </div>
     </div>
 
+    <style>
+        .project-slider {
+          height: 100%;
+          min-height: 400px;
+        }
+        .project-slider .slick-list,
+        .project-slider .slick-track,
+        .project-slider .slick-slide,
+        .project-slider .slick-slide > div {
+          height: 100%;
+        }
+        .project-slider .image-bg {
+          height: 100%;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      </style>
+      
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
