@@ -237,14 +237,6 @@
     </div>
   </footer>
 
-  <div class="slider">
-      <div><img src="img/portfolio/fullsize/slide_1_1.jpg" /></div>
-      <div><img src="img/portfolio/fullsize/slide_1_2.jpg" /></div>
-      <div><img src="img/portfolio/fullsize/slide_1_3.jpg" /></div>
-      <div><img src="img/portfolio/fullsize/slide_1_4.jpg" /></div>
-      <div><img src="img/portfolio/fullsize/slide_1_5.jpg" /></div>
-    </div>
-
   <style>
 
     .project-slider{
@@ -385,6 +377,15 @@
         });
         
       });
+
+$('.fade').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
+
     </script>
 
 </body>
