@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+ 
   <title>Designer | Renee Chang</title>
   <link rel="shortcut icon" type="image/jpg" href="img/icon.jpg">
 
@@ -89,6 +89,8 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">about me.</h2>
+          <img class="img-thumbnail alt="image height="400" width="400" src="img/me.JPG">
+          <p class="text-white mt-4">Renee | Chang yung-chun</p>
           <hr class="divider light my-4">
           <p class="text-white-75 mb-4">Originally from Taiwan | Currently studying in Advertising Design at the Hong Kong Polytechnic University | Promotion secretary at PolyU TSA from 2019-2020</p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#skills">see my works</a>
@@ -216,8 +218,6 @@
       </div>
     </div>
   </section>
-
-
   
   <!-- Contact Section -->
   <section class="page-section" id="contact">
@@ -243,122 +243,11 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-light py-5">
+  <footer class="bg-dark py-5">
     <div class="container">
       <div class="small text-center text-muted">Copyright &copy; 2019 | Renee Chang.</div>
     </div>
   </footer>
-
-  <style>
-
-    .project-slider{
-      height: 100%;
-    }
-    .slick-list{
-      height: 100%;
-    }
-    .project-slider .img-bg {
-      height: 100%;
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-      .project-slider {
-        height: 100%;
-        min-height: 400px;
-      }
-      .project-slider .slick-list,
-      .project-slider .slick-track,
-      .project-slider .slick-slide,
-      .project-slider .slick-slide > div {
-        height: 100%;
-      }
-      .project-slider .image-bg {
-        height: 100%;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-    .iframe{
-      border-width: 0;
-    }
-  
-    .slick-dots{
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      width: 100%;
-      list-style: none;
-      text-align: center;
-      margin: 0;
-    }
-    .slick-dots li{
-      display: inline-block;
-    }
-    .slick-dots li button{
-      outline: none;
-      display: inline-block;
-      background-color: transparent;
-      border-width: 0;
-    }
-    .slick-dots li button span{
-      display: none;
-    }
-    .slick-dots li button:before{
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 5px;
-      content: '';
-      background-color: #ffffff;
-    }
-    .slick-dots li.slick-active button:before{
-      background-color: #000000;
-    }
-  
-    .slick-buttons{
-        background-color: transparent;
-        border-width: 0;
-      }
-      .slick-buttons{
-        position: absolute;
-        top: 50%;
-        transform: translate3d(0, -50%, 0);
-        z-index: 2;
-      }
-      .slick-buttons span{
-        display: none;
-      }
-      .slick-buttons.slick-prev:before,
-      .slick-buttons.slick-next:before{
-        display: block;
-        width: 20px;
-        height: 20px;
-        border-color: #ffffff;
-        content: '';
-      }
-      .slick-buttons.slick-prev{
-        left: 20px;
-      }
-      .slick-buttons.slick-prev:before{
-        border-top-width: 8px;
-        border-left-width: 8px;
-        border-top-style: solid;
-        border-left-style: solid;
-        transform: rotate(-45deg);
-      }
-      .slick-buttons.slick-next:before{
-        border-bottom-width: 8px;
-        border-right-width: 8px;
-        border-bottom-style: solid;
-        border-right-style: solid;
-        transform: rotate(-45deg);
-      }
-      .slick-buttons.slick-next{
-        right: 20px;
-      }
-  
-  </style>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -374,21 +263,21 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".slider").slick({
-          autoplay: true,
-          dots: true,
-          prevArrow:
-            '<button type="button" class="slick-buttons slick-prev"><span>Previous</span></button>',
-          nextArrow:
-            '<button type="button" class="slick-buttons slick-next"><span>Next</span></button>',
-          customPaging: function(slick, index) {
-            return "<button><span>" + (index + 1) + "</span></button>";
-          }
-        });
-        
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".slider").slick({
+        autoplay: true,
+        dots: true,
+        prevArrow:
+          '<button type="button" class="slick-buttons slick-prev"><span>Previous</span></button>',
+        nextArrow:
+          '<button type="button" class="slick-buttons slick-next"><span>Next</span></button>',
+        customPaging: function(slick, index) {
+          return "<button><span>" + (index + 1) + "</span></button>";
+        }
       });
+      
+    });
 
     </script>
 
