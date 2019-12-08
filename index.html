@@ -7,6 +7,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+</style>
  
   <title>Designer | Renee Chang</title>
   <link rel="shortcut icon" type="image/jpg" href="img/icon.jpg">
@@ -219,6 +293,42 @@
     </div>
   </section>
   
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="img/portfolio/fullsize/slide_8.JPG" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/portfolio/fullsize/slide_9.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/portfolio/fullsize/slide_6_2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/portfolio/fullsize/slide_1_2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/portfolio/fullsize/slide_10.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+    
   <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">
@@ -263,22 +373,33 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".slider").slick({
-        autoplay: true,
-        dots: true,
-        prevArrow:
-          '<button type="button" class="slick-buttons slick-prev"><span>Previous</span></button>',
-        nextArrow:
-          '<button type="button" class="slick-buttons slick-next"><span>Next</span></button>',
-        customPaging: function(slick, index) {
-          return "<button><span>" + (index + 1) + "</span></button>";
-        }
-      });
-      
-    });
-
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
     </script>
 
 </body>
